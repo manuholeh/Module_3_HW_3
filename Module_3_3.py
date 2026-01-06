@@ -5,10 +5,10 @@ def normalize_phone(num):
 
     if digits.startswith("380"):
         return "+" + digits
-    if digits[0].isdigit():
-        return "+38" + digits
     if digits.startswith("+380"):
         return digits
+    if digits[0].isdigit():
+        return "+38" + digits
     if re.match(r"^\+\d", digits):
         return digits
 
